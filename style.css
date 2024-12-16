@@ -1,0 +1,147 @@
+/* General body settings */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.headermenu {
+    background-color: #2C2C2C; 
+    padding: 20px 20px 10px;
+}
+
+/* Header container */
+.div-header {
+    display: flex;
+    flex-direction: column; /* Stack div1, div2, and div3 vertically */
+    gap: 20px; /* Space between div1, div2, and div3 */
+}
+
+/* Style for div1 and div2 on the same line */
+.div-header > .div1,
+.div-header > .div2 {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Make div1 and div2 spaced between */
+.div1 {
+    justify-content: flex-start; /* Align div1 items to the left */
+}
+
+.div2 {
+    justify-content: space-between; /* Space div2 items across */
+    width: 100%; /* Ensure div2 stretches across the full available width */
+}
+
+/* Style for div1 */
+.div1 {
+    color: #FFF; /* White text for contrast */
+}
+
+/* Style for div1 icons */
+.div1 i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+/* Style for div1 text */
+.div1 div {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Style for div2 */
+.div2 {
+    gap: 15px;
+}
+
+/* Style for div2 icons */
+.div2 i {
+    margin-left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #D0D0D0; /* Slightly lighter gray for icons */
+}
+
+/* Hover effects for icons in div2 */
+.div2 i:hover {
+    color: #FFF; /* Change icon color to white when hovered */
+    transition: color 0.3s ease;
+}
+
+/* Tooltip for hover */
+.div2 i:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    background-color: #333;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    top: -30px;
+    text-align: center;
+}
+
+/* Style for div3 */
+.div3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Responsive layout for div3 */
+    gap: 20px;
+    color: #FFF;
+    font-size: 16px;
+}
+
+.div3 p {
+    display: flex;
+    align-items: center;
+}
+
+.div3 i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Hover effects for div3 icons */
+.div3 i:hover {
+    color: #FFF;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for div3 items */
+.div3 p:hover {
+    background-color: #444;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.file-container {
+    background-color: #ffffff;
+    margin: 20px;
+    border: 1px solid #e1e4e8;
+}
+
+.file-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e1e4e8;
+    font-size: 14px;
+}
+
+.file-row i {
+    margin-right: 5px;
+}
+
+.file-row span {
+    flex: 1;
+}
+
+.file-row .time {
+    text-align: right;
+    color: #586069;
+    font-size: 12px;
+}
